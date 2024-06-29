@@ -9,7 +9,7 @@ Download or clone this demo
 
 => Some steps to run this demo:
 
-- step 1: create a project notification on firebase. download and replace my file google_service.json to your file google+service.json.
+- step 1: create a project notification on Firebase(https://console.firebase.google.com/). download and replace my file google_service.json (root_project\android\app) to your file google_service.json.
 - step 2: you have to run command: flutter pub get
 - step 3: open your google_service.json and go to lib\service\firebase_option.dart and fill FirebaseOption (from line 31)
 - step 4: flutter run or run and debug
