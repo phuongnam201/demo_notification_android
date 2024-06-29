@@ -1,17 +1,20 @@
 # learning_firebase
 
-A new Flutter project.
+This is a demo push notification for flutter.
+however, it's only for android because i don't have macbook haha ^.^
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+Download or clone this demo
 
-A few resources to get you started if this is your first Flutter project:
+=> Some steps to run this demo:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- step 1: create a project notification on firebase. download and replace my file google+service.json to your file google+service.json.
+- step 2: you have to run command: flutter pub get
+- step 3: open your google+service.json and go to lib\service\firebase_option.dart and fill FirebaseOption (from line 31)
+- step 4: flutter run or run and debug
+- step 5: test a notification from firebase cloud messaging
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
 # demo_notification_android
+
+Good luck!
