@@ -29,11 +29,11 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'your_api_key',
-    appId: 'your_app_id',
-    messagingSenderId: 'your_project_number',
-    projectId: 'your_project_id',
-    //storageBucket: ,
+    apiKey: 'AIzaSyDRUNrNRFHL3tKI5k9vV0IvHh557UX5LwE',
+    appId: '1:998232265168:android:92ba3faec3e753ad0e69d5',
+    messagingSenderId: '998232265168',
+    projectId: 'notification-c2902',
+    storageBucket: "notification-c2902.appspot.com",
   );
 
   static const FirebaseOptions ios = FirebaseOptions(

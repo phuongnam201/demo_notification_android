@@ -24,10 +24,9 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       body: Center(
         child: ElevatedButton(
-          child: Text("Turn on notification"),
+          child: Text("Setting notifications"),
           onPressed: () async {
             await notificationService.openNotifySetting();
-            print("you have just clicked on Đặt phòng");
           },
           style: ElevatedButton.styleFrom(
             backgroundColor: Colors.amber[600],
