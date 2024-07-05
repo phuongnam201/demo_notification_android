@@ -1,4 +1,5 @@
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
+import 'package:firebase_messaging/firebase_messaging.dart';
 
 class LocalNotification {
   static final FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin =
@@ -22,10 +23,27 @@ class LocalNotification {
     flutterLocalNotificationsPlugin.initialize(initializationSettings);
   }
 
+  static Future<void> subscribeToTopic(String topicName) async {
+    await FirebaseMessaging.instance.subscribeToTopic(topicName);
+    print('Subscribed to $topicName topic!');
+  }
+
+  static void initializeFirebaseMessaging() {
+    FirebaseMessaging.onMessage.listen((RemoteMessage message) {
+      RemoteNotification? notification = message.notification;
+      AndroidNotification? android = message.notification?.android;
+
+      if (notification != null && android != null) {
+        // Hiển thị thông báo khi nhận được từ topic
+        showNotification(notification.title ?? '', notification.body ?? '');
+      }
+    });
+  }
+
   static Future<void> showNotification(String title, String body) async {
     var androidPlatformChannelSpecifics = const AndroidNotificationDetails(
-      'your_channel_id',
-      'your_channel_name',
+      'VR_BA_BE',
+      'DU_LICH_BA_BE',
       importance: Importance.max,
       priority: Priority.high,
       playSound: true,

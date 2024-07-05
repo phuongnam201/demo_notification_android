@@ -39,6 +39,8 @@ class NotificationService {
     handleForegroundMessages();
     handleNotificationTap();
     LocalNotification.setupLocalNotifications(); // Use helper method
+    LocalNotification.subscribeToTopic('dulich_babe');
+    LocalNotification.initializeFirebaseMessaging();
   }
 
   void handleOpenedAppMessages() {
