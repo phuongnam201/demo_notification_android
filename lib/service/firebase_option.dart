@@ -28,6 +28,7 @@ class DefaultFirebaseOptions {
     }
   }
 
+  //edit infor below according to google-service.json
   static const FirebaseOptions android = FirebaseOptions(
     apiKey: 'AIzaSyDRUNrNRFHL3tKI5k9vV0IvHh557UX5LwE',
     appId: '1:998232265168:android:92ba3faec3e753ad0e69d5',
