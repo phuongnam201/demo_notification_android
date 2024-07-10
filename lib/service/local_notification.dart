@@ -28,6 +28,11 @@ class LocalNotification {
     print('Subscribed to $topicName topic!');
   }
 
+  static Future<void> unSubscribeToTopic(String topicName) async {
+    await FirebaseMessaging.instance.unsubscribeFromTopic(topicName);
+    print('Unsubscribed to $topicName topic!');
+  }
+
   static void initializeFirebaseMessaging() {
     FirebaseMessaging.onMessage.listen((RemoteMessage message) {
       RemoteNotification? notification = message.notification;
